@@ -19,6 +19,8 @@ After that running following commands on node server would be enough because it 
 
 Alternatively you can run them seperately as well (node server will run on port 4000 and react will run on 3000)
 
+**Note:** If you want to see the graphql api in a documented way, you can go to http://localhost:4000/graphql
+
 Backend:
 
 -   Node.JS/Express
