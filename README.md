@@ -13,7 +13,11 @@ To run the app, firstly you need to run:
 
 on both under client and server folders
 
-After that running following commands on node server would be enough because it is serving frontend using ssr:
+After that you need to build client with:
+
+<code>yarn build or npm run build</code>
+
+Finally, running following commands on node server would be enough because it is serving frontend using ssr:
 
 <code>npm run dev or yarn run dev</code>
 
