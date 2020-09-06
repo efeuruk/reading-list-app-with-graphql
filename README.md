@@ -10,6 +10,7 @@ Overall it is a single page web app, it firstly loads the cards of books, if you
 To run the app, node server is serving the frontend with ssr technique so only on server folder you can run:
 
 <code>npm run dev or yarn run dev</code>
+
 Backend:
 
 -   Node.JS/Express
