@@ -1,0 +1,7 @@
+# Client ignore
+/server/.env
+/server/node_modules
+
+# Server ignore
+/client/build
+/client/node_modules

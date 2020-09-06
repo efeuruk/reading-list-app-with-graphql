@@ -7,9 +7,17 @@ https://www.youtube.com/watch?v=ed8SzALpx1Q&ab_channel=freeCodeCamp.org
 
 Overall it is a single page web app, it firstly loads the cards of books, if you click one of the cards it shows that book's details on the green part. If you want to add a new book you can easily use the form below. It is fully responsive, can look nice on mobile as well.
 
-To run the app, node server is serving the frontend with ssr technique so only on server folder you can run:
+To run the app, firstly you need to run:
+
+<code>yarn or npm i</code>
+
+on both under client and server folders
+
+After that running following commands on node server would be enough because it is serving frontend using ssr:
 
 <code>npm run dev or yarn run dev</code>
+
+Alternatively you can run them seperately as well (node server will run on port 4000 and react will run on 3000)
 
 Backend:
 

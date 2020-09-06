@@ -1,0 +1,107 @@
+:root {
+	--green: #2fad4c;
+	--paddingValue: 20px;
+	--box-shadow: -4px 2px 41px -9px rgba(204, 204, 204, 1);
+}
+
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+		"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+		"Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: #eee;
+}
+
+.main {
+	margin: 0 var(--paddingValue);
+}
+
+.main p {
+	text-decoration: underline;
+	text-decoration-color: var(--green);
+}
+
+.book-list {
+	display: flex;
+	list-style-type: none;
+	flex-direction: column;
+	flex-wrap: wrap;
+	padding: 0;
+	margin: 20px 0px;
+}
+
+.book-list__elem {
+	max-height: 30px;
+	padding: var(--paddingValue);
+	margin-bottom: 10px;
+	border: 1px solid var(--green);
+	border-radius: 5px;
+	background-color: white;
+	font-weight: bold;
+	color: var(--green);
+	cursor: pointer;
+	box-shadow: var(--box-shadow);
+}
+
+.book-details {
+	background-color: var(--green);
+	color: white;
+	padding: 30px var(--paddingValue);
+	margin: 0 -20px;
+}
+
+.add-book {
+	background-color: white;
+	padding: var(--paddingValue);
+	margin: 30px -20px;
+}
+
+.add-book button {
+	border: none;
+	background-color: var(--green);
+	color: white;
+	cursor: pointer;
+	border-radius: 10px;
+	padding: 10px;
+	box-shadow: var(--box-shadow);
+}
+
+.field {
+	margin-bottom: 10px;
+}
+
+.field label {
+	margin-right: 10px;
+}
+
+.field input,
+.field select {
+	padding: 5px 10px;
+}
+
+.fa-trash {
+	margin-left: 10px;
+	color: #f54266;
+}
+
+@media only screen and (min-width: 850px) {
+	.book-list {
+		flex-direction: row;
+		width: 70%;
+	}
+
+	.book-list__elem {
+		margin: 0 var(--paddingValue) var(--paddingValue) 0;
+	}
+
+	.book-details {
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 30%;
+		height: 100vh;
+		box-shadow: -15px 1px 24px -2px rgba(0, 0, 0, 0.62);
+	}
+}
