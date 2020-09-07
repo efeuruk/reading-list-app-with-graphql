@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { useQuery, useMutation } from "@apollo/client";
 import { getAuthorsQuery, addBookMutation, getBooksQuery } from "../queries";
+import Loading from './Loading';
 
 const renderAuthors = (loading, error, data) => {
 	if (loading) {
-		return <option disabled>Loading.....</option>;
+		return <option disabled><Loading /></option>;
 	} else if (error) {
 		return <option disabled>Error......</option>;
 	} else {

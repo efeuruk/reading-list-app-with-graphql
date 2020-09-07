@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { useQuery, useMutation } from "@apollo/client";
 import { getBooksQuery, deleteBookMutation } from '../queries';
 import BookDetails from "./BookDetails";
+import Loading from './Loading';
 
 const renderBookList = (loading, error, data, setSelected, deleteBook) => {
 	if (loading) {
-		return <p>Loading.....</p>;
+		return <Loading />;
 	} else if (error) {
 		return <p>Error......</p>;
 	} else {
