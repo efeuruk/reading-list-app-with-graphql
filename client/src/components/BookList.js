@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useQuery, useMutation } from "@apollo/client";
-import { getBooksQuery, deleteBookQuery } from '../queries';
+import { getBooksQuery, deleteBookMutation } from '../queries';
 import BookDetails from "./BookDetails";
 
 const renderBookList = (loading, error, data, setSelected, deleteBook) => {
@@ -17,7 +17,7 @@ const renderBookList = (loading, error, data, setSelected, deleteBook) => {
 						<i className="fas fa-trash" onClick={() =>
 							deleteBook({
 								variables: { id },
-								refetch: [{ query: getBooksQuery }]
+								refetchQueries: [{ query: getBooksQuery }]
 							})}></i>
 					</li>;
 				})}
@@ -28,7 +28,7 @@ const renderBookList = (loading, error, data, setSelected, deleteBook) => {
 
 function BookList() {
 	const { loading, error, data } = useQuery(getBooksQuery);
-	const [deleteBook] = useMutation(deleteBookQuery);
+	const [deleteBook] = useMutation(deleteBookMutation);
 	const [selected, setSelected] = useState(null);
 	return <>
 		{renderBookList(loading, error, data, setSelected, deleteBook)}
