@@ -5,7 +5,7 @@ const { graphqlHTTP } = require('express-graphql');
 const mongoose = require('mongoose');
 const schema = require('./schema/schema');
 const cors = require('cors');
-const colors = require('colors');
+require('colors');
 
 const { MONGO_USERNAME, MONGO_PASSWORD } = process.env;
 const connectionString = `mongodb+srv://${MONGO_USERNAME}:${MONGO_PASSWORD}@graphqldeneme.itp20.mongodb.net/graphql-deneme?retryWrites=true&w=majority`;

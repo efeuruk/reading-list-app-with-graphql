@@ -57,4 +57,13 @@ const deleteBookMutation = gql`
 	}
 `;
 
-export { getBooksQuery, getAuthorsQuery, addBookMutation, getBookQuery, deleteBookMutation };
+const updateBookMutation = gql`
+	mutation($id: ID!, $name: String, $genre: String, $authorId: ID) {
+		updateBook(id: $id, name: $name, genre: $genre, authorId: $authorId) {
+			name
+			genre
+		}
+	}
+`;
+
+export { getBooksQuery, getAuthorsQuery, addBookMutation, getBookQuery, deleteBookMutation, updateBookMutation };

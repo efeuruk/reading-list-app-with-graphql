@@ -115,6 +115,19 @@ const Mutation = new GraphQLObjectType({
             resolve(parent, args) {
                 return Book.deleteOne({ _id: args.id });
             }
+        },
+        updateBook: {
+            type: BookType,
+            args: {
+                id: { type: GraphQLNonNull(GraphQLID) },
+                name: { type: GraphQLString },
+                genre: { type: GraphQLString },
+                authorId: { type: GraphQLID },
+            },
+            resolve(parent, args) {
+                const { id, name, genre, authorId } = args;
+                return Book.updateOne({ id, name, genre, authorId })
+            }
         }
     }
 });
