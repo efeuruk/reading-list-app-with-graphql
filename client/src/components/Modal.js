@@ -7,6 +7,7 @@ export default function Modal({ isOpen, state, bookId }) {
 			return e.target.classList.contains("modal") ? state(false) : null;
 		});
 	};
+
 	useEffect(() => {
 		closeModalOnBlur();
 	});
@@ -15,7 +16,7 @@ export default function Modal({ isOpen, state, bookId }) {
 		<div className={`modal${isOpen ? " open" : ""}`}>
 			<div className="modal__content">
 				<i className="fas fa-times" onClick={() => state(false)}></i>
-				<UpdateBook bookId={bookId} />
+				<UpdateBook bookId={bookId} modalState={state} />
 			</div>
 		</div>
 	);

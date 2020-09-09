@@ -119,14 +119,14 @@ const Mutation = new GraphQLObjectType({
         updateBook: {
             type: BookType,
             args: {
-                id: { type: GraphQLNonNull(GraphQLID) },
+                id: { type: new GraphQLNonNull(GraphQLID) },
                 name: { type: GraphQLString },
                 genre: { type: GraphQLString },
                 authorId: { type: GraphQLID },
             },
             resolve(parent, args) {
                 const { id, name, genre, authorId } = args;
-                return Book.updateOne({ id, name, genre, authorId })
+                return Book.updateOne({ id: id }, { $set: { name: name, genre: genre, authorId: authorId } })
             }
         }
     }
