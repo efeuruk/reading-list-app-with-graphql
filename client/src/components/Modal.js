@@ -1,8 +1,16 @@
-// TODO: Modal dışı tıklama kapanması
-import React from "react";
+import React, { useEffect } from "react";
 import UpdateBook from "./UpdateBook";
 
 export default function Modal({ isOpen, state, bookId }) {
+	const closeModalOnBlur = () => {
+		window.addEventListener("click", (e) => {
+			return e.target.classList.contains("modal") ? state(false) : null;
+		});
+	};
+	useEffect(() => {
+		closeModalOnBlur();
+	});
+
 	return (
 		<div className={`modal${isOpen ? " open" : ""}`}>
 			<div className="modal__content">

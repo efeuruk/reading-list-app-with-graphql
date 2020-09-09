@@ -36,7 +36,6 @@ function UpdateBook({ bookId }) {
 
     const submitForm = (e) => {
         e.preventDefault();
-        console.log(bookId, name, genre, authorId)
         updateBook({
             variables: { id: bookId, name, genre, authorId },
             refetchQueries: [{ query: getBooksQuery }],
