@@ -126,7 +126,7 @@ const Mutation = new GraphQLObjectType({
             },
             resolve(parent, args) {
                 const { id, name, genre, authorId } = args;
-                return Book.updateOne({ id: id }, { $set: { name: name, genre: genre, authorId: authorId } })
+                return Book.updateOne({ _id: id }, { $set: { name: name, genre: genre, authorId: authorId } })
             }
         }
     }
