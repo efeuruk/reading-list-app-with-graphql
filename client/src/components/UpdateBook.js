@@ -44,7 +44,11 @@ function UpdateBook({ bookId, modalState }) {
     }, [dataBook])
 
     useEffect(() => {
-        updateOnBookData();
+        let mounted = true;
+        if (mounted) {
+            updateOnBookData();
+        }
+        return () => mounted = false;
     }, [updateOnBookData])
 
     const submitForm = (e) => {
@@ -52,8 +56,9 @@ function UpdateBook({ bookId, modalState }) {
         updateBook({
             variables: { id: bookId, name, genre, authorId },
             refetchQueries: [{ query: getBooksQuery }],
+        }).then(() => {
+            modalState(false);
         });
-        modalState(false);
     };
 
     if (loadingBook) {
