@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import UpdateBook from "./UpdateBook";
+import UpdateBook from "../UpdateBook";
 
 export default function Modal({ isOpen, state, bookId }) {
 	const closeModalOnBlur = () => {

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useQuery, useMutation } from "@apollo/client";
-import { getBooksQuery, deleteBookMutation } from "../queries";
-import BookDetails from "./BookDetails";
-import Loading from "./Loading";
-import Modal from "./Modal";
+import { getBooksQuery, deleteBookMutation } from "../../queries";
+import BookDetails from "../BookDetails";
+import Loading from "../Loading";
+import Modal from "../Modal";
 
 const renderBookList = (
 	loading,

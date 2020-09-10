@@ -1,7 +1,7 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
-import { getBookQuery } from "../queries";
-import Loading from './Loading';
+import { getBookQuery } from "../../queries";
+import Loading from '../Loading';
 
 const renderBookList = (loading, error, data) => {
 	if (loading) {
