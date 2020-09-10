@@ -5,7 +5,7 @@ It was inspired by this tutorial:
 
 https://www.youtube.com/watch?v=ed8SzALpx1Q&ab_channel=freeCodeCamp.org
 
-Overall it is a single page web app, it firstly loads the cards of books, if you click one of the cards it shows that book's details on the green part. If you want to add a new book you can easily use the form below. It is fully responsive, can look nice on mobile as well.
+Overall it is a single page web app, it firstly loads the cards of books, if you click one of the cards it shows that book's details on the green part. If you want to add a new book you can easily use the form below. In addition to that, it has features of deleting and updating books. It is fully responsive, can look nice on mobile as well.
 
 To run the app, firstly you need to run:
 
